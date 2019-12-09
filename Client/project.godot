@@ -37,7 +37,7 @@ modules="org/godotengine/godot/GodotPaymentV3,org/godotengine/godot/GodotPlayGam
 [application]
 
 config/name="Client_v1"
-run/main_scene="res://Init/InitScene.tscn"
+run/main_scene="res://SceneFolder/MainScene.tscn"
 config/icon="res://Init/Gadget/icon.png"
 
 [autoload]
@@ -45,7 +45,6 @@ config/icon="res://Init/Gadget/icon.png"
 Global="*res://Global.gd"
 Bgm="*res://Bgm.tscn"
 Network="*res://Network.gd"
-Firebase="*res://addons/GDFirebase/Firebase.gd"
 GPGS="*res://Init/GPGS.gd"
 
 [display]
