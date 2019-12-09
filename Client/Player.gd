@@ -396,8 +396,11 @@ func _on_GunTimer_timeout(): #GunTimer에서 지정한 시간이 다 되면
 	
 func takeDamage(dmg): 
 	health -= dmg
-	#if(health <= 0):
-      #Global.goto_scene("res://SceneFolder/GameOverScene.tscn")
+	if(health <= 0):
+		get_tree().set_network_peer(null) 
+		get_node("/root/World").queue_free()
+		Global.goto_scene("res://SceneFolder/GameOverScene.tscn")
+		
 	hitTimer = 1
 	
 	
