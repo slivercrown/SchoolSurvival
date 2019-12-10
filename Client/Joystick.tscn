@@ -7,8 +7,8 @@
 [node name="Joystick" type="CanvasLayer"]
 
 [node name="Moving" type="Sprite" parent="."]
-position = Vector2( 80, 190 )
-scale = Vector2( 0.3, 0.3 )
+position = Vector2( 80, 210 )
+scale = Vector2( 0.2, 0.2 )
 z_index = 1
 texture = ExtResource( 1 )
 
@@ -20,8 +20,8 @@ pressed = ExtResource( 2 )
 script = ExtResource( 3 )
 
 [node name="Aim" type="Sprite" parent="."]
-position = Vector2( 390, 190 )
-scale = Vector2( 0.3, 0.3 )
+position = Vector2( 350, 210 )
+scale = Vector2( 0.2, 0.2 )
 z_index = 1
 texture = ExtResource( 1 )
 

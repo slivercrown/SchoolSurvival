@@ -46,7 +46,6 @@ Global="*res://Global.gd"
 Bgm="*res://Bgm.tscn"
 Network="*res://Network.gd"
 GPGS="*res://Init/GPGS.gd"
-Firebase="*res://addons/GDFirebase/Firebase.gd"
 
 [display]
 
