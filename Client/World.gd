@@ -16,6 +16,7 @@ var map_array = [ [0, 0, 0, 0, 0 ,0, 0, 0],
 func _ready():
 	Bgm._music_stop()
 	$GameBgm.play()
+	$CanvasLayer/InventoryButton/Inventory_Sprite.modulate=Color(1,1,1,0.6)
 	if not(get_tree().is_network_server()): #if clinet -> set my player / else(server) -> not need to swpanning player
 		#my player
 		print("im no tserver not(get_tree().is_network_server() is:", not(get_tree().is_network_server()))
