@@ -206,14 +206,22 @@ func _make_inventory():
 	if oldinven == null:
 		oldinven = INVENTORY_SCENE.instance()
 		add_child(oldinven)
-		oldinven.hide()
+		oldinven.get_node("inventory_kan").hide()
 	oldinven.start_at(((grid_position.x*2)+1) * 240 + 144 , ((grid_position.y*2)+1) * 135 - 109)
 	
 func _show_inventory():
-	oldinven.show()
+	oldinven.get_node("inventory_kan").show()
+	"""oldinven.get_node("item1_tack").show()
+	oldinven.get_node("item2_gum").show()
+	oldinven.get_node("item3_glue").show()
+	oldinven.get_node("item4_eraser").show()"""
 
 func _hide_inventory():
-	oldinven.hide()
+	oldinven.get_node("inventory_kan").hide()
+	"""oldinven.get_node("item1_tack").hide()
+	oldinven.get_node("item2_gum").hide()
+	oldinven.get_node("item3_glue").hide()
+	oldinven.get_node("item4_eraser").hide()"""
 	
 func _make_itembutton():
 	if oldbutton ==null:
