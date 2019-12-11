@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Rooms/ItemRoom/ItemRoom.gd" type="Script" id=1]
 [ext_resource path="res://cave.png" type="Texture" id=2]
@@ -8,7 +8,6 @@
 [ext_resource path="res://Items/Passive/Eraser/Eraser_Item.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Items/Passive/Glue/Glue_Item.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Rooms/CollapseCheckArea.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Monster/base/EnemyType1/EnemyType1.tscn" type="PackedScene" id=9]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -277,6 +276,3 @@ position = Vector2( 59.9966, 54.0316 )
 position = Vector2( 414.827, 55.8645 )
 
 [node name="CollapseCheckArea" parent="." instance=ExtResource( 8 )]
-
-[node name="EnemyType1" parent="." instance=ExtResource( 9 )]
-position = Vector2( 320, 135 )

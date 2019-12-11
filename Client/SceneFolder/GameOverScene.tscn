@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://GameOverScene.gd" type="Script" id=1]
 [ext_resource path="res://UI/K-089.jpg" type="Texture" id=2]
-[ext_resource path="res://UI/K-086.jpg" type="Texture" id=3]
-[ext_resource path="res://UI/K-088.jpg" type="Texture" id=4]
-[ext_resource path="res://UI/K-029.jpg" type="Texture" id=5]
+[ext_resource path="res://UI/K-088.jpg" type="Texture" id=3]
+[ext_resource path="res://UI/K-029.jpg" type="Texture" id=4]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -18,20 +17,6 @@ position = Vector2( 244.153, 105.075 )
 scale = Vector2( 0.656072, 0.606617 )
 texture = ExtResource( 2 )
 
-[node name="Button" type="Button" parent="."]
-margin_left = 227.662
-margin_top = 230.99
-margin_right = 669.662
-margin_bottom = 301.99
-rect_scale = Vector2( 0.2, 0.5 )
-custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
-text = "Replay"
-
-[node name="Replay_sprite" type="Sprite" parent="Button"]
-position = Vector2( 276.597, 26.5533 )
-scale = Vector2( 2.5, 1 )
-texture = ExtResource( 3 )
-
 [node name="Button2" type="Button" parent="."]
 margin_left = 363.722
 margin_top = 229.039
@@ -43,12 +28,11 @@ text = "Text"
 [node name="Exit_sprite" type="Sprite" parent="Button2"]
 position = Vector2( 238.135, 32 )
 scale = Vector2( 2.5, 1 )
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 
 [node name="BackGround" type="Sprite" parent="."]
 position = Vector2( 237.471, 135.143 )
 scale = Vector2( 3.20965, 1.8248 )
 z_index = -2
-texture = ExtResource( 5 )
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+texture = ExtResource( 4 )
 [connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]

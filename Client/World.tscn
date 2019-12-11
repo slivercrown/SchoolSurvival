@@ -238,16 +238,16 @@ bus = "MenuBgm"
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="InventoryButton" type="Button" parent="CanvasLayer"]
-margin_left = 418.145
-margin_top = 203.0
-margin_right = 430.145
+margin_left = 413.0
+margin_top = 193.0
+margin_right = 438.0
 margin_bottom = 223.0
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Inventory_Sprite" type="Sprite" parent="CanvasLayer/InventoryButton"]
-position = Vector2( 6, 25 )
+position = Vector2( 12.8256, 30.688 )
 scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 6 )
 [connection signal="tween_completed" from="ScreenShake/Tween" to="ScreenShake" method="_on_Tween_tween_completed"]

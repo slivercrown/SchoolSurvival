@@ -34,8 +34,8 @@ z_index = 8
 texture = ExtResource( 5 )
 
 [node name="Button" type="Button" parent="."]
-margin_left = 381.414
-margin_top = 154.877
-margin_right = 403.414
-margin_bottom = 177.877
+margin_left = 377.0
+margin_top = 150.0
+margin_right = 407.0
+margin_bottom = 185.0
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
