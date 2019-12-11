@@ -4,6 +4,7 @@ var master_player
 var new_player = Player.instance()
 var count = 0
 
+slave var np
 
 var map_array = [ [0, 0, 0, 0, 0 ,0, 0, 0],
 				[0, 0, 0, 0, 0, 0, 0 , 0],
@@ -30,8 +31,8 @@ func _ready():
 		_player_inventory()
 		_player_itembutton()
 		start_text()
-		var left =5
-		update_score(5)
+		#var left =5
+		#update_score(5)
 		
 		
 		var info = Network.self_data
@@ -58,8 +59,8 @@ func _next_player():
 		_player_inventory()
 		_player_itembutton()
 		start_text()
-		var left =5
-		update_score(5)
+		#var left =5
+		#update_score(5)
 		
 		
 		var info = Network.self_data
@@ -93,8 +94,8 @@ func _player_itembutton():
 func start_text():
 	$LeftPlayer/PlayerText.text = "Left : "
 
-func update_score(left):
-	$LeftPlayer/PlayerNum.text = str(left)
+func update_score():
+	$LeftPlayer/PlayerNum.text = str(np)
 	
 
 func _on_InventoryButton_pressed():
