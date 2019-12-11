@@ -3,7 +3,7 @@
 [ext_resource path="res://UI/ItemButton/ItemButton.gd" type="Script" id=1]
 [ext_resource path="res://Items/Active/Tack/tack_item1.png" type="Texture" id=2]
 [ext_resource path="res://Items/Active/Gum/gum_item1.png" type="Texture" id=3]
-[ext_resource path="res://UI/그림2.png" type="Texture" id=4]
+[ext_resource path="res://UI/itembutton2.png" type="Texture" id=4]
 [ext_resource path="res://UI/ItemButton/ib_background.png" type="Texture" id=5]
 
 [node name="ItemButton" type="CanvasLayer"]
