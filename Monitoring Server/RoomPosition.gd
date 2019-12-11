@@ -145,6 +145,7 @@ remote func build_server_map():
 							get_node("/root/World").call_deferred("add_child",room)
 							create_walls(x, y, room)
 			#get_parent()._ready()
+			get_parent().get_node("FullMap").map_array = map_array
 			get_parent().map_array = map_array
 			#get_parent()._player_map()
 		else:
