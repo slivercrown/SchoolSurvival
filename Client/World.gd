@@ -4,6 +4,7 @@ var master_player
 var new_player = Player.instance()
 var count = 0
 
+
 var map_array = [ [0, 0, 0, 0, 0 ,0, 0, 0],
 				[0, 0, 0, 0, 0, 0, 0 , 0],
 				[0, 0, 0, 0, 0 ,0, 0, 0 ],
@@ -28,6 +29,10 @@ func _ready():
 		master_player = new_player
 		_player_inventory()
 		_player_itembutton()
+		start_text()
+		var left =5
+		update_score(5)
+		
 		
 		var info = Network.self_data
 		print(Network.self_data)
@@ -52,6 +57,10 @@ func _next_player():
 		master_player = new_player
 		_player_inventory()
 		_player_itembutton()
+		start_text()
+		var left =5
+		update_score(5)
+		
 		
 		var info = Network.self_data
 		print(Network.self_data)
@@ -81,8 +90,12 @@ func _player_itembutton():
 	print("make")
 	new_player._make_itembutton()
 
+func start_text():
+	$LeftPlayer/PlayerText.text = "Left : "
 
-
+func update_score(left):
+	$LeftPlayer/PlayerNum.text = str(left)
+	
 
 func _on_InventoryButton_pressed():
 	if(count %2 == 0):
