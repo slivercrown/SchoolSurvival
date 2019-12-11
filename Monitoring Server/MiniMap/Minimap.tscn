@@ -144,33 +144,41 @@ position = Vector2( 24, -16 )
 texture = ExtResource( 5 )
 
 [node name="Sprite_GTop" type="Sprite" parent="."]
+visible = false
 position = Vector2( 0, -16 )
 texture = ExtResource( 6 )
 
 [node name="Sprite_GTopLeft" type="Sprite" parent="."]
+visible = false
 position = Vector2( -24, -16 )
 texture = ExtResource( 6 )
 
 [node name="Sprite_GLeft" type="Sprite" parent="."]
+visible = false
 position = Vector2( -24, 0 )
 texture = ExtResource( 6 )
 
 [node name="Sprite_GBottomLeft" type="Sprite" parent="."]
+visible = false
 position = Vector2( -24, 16 )
 texture = ExtResource( 6 )
 
 [node name="Sprite_GBottom" type="Sprite" parent="."]
+visible = false
 position = Vector2( 0, 16 )
 texture = ExtResource( 6 )
 
 [node name="Sprite_GBottomRight" type="Sprite" parent="."]
+visible = false
 position = Vector2( 24, 16 )
 texture = ExtResource( 6 )
 
 [node name="Sprite_GRight" type="Sprite" parent="."]
+visible = false
 position = Vector2( 24, 0 )
 texture = ExtResource( 6 )
 
 [node name="Sprite_GTopRight" type="Sprite" parent="."]
+visible = false
 position = Vector2( 24, -16 )
 texture = ExtResource( 6 )

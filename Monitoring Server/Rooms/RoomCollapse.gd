@@ -12,8 +12,8 @@ var area2 = null
 
 func _ready():
 	center = get_global_position()
-	check_first()
-	$Timer.start()
+	#check_first()
+	#$Timer.start()
 
 	
 	
