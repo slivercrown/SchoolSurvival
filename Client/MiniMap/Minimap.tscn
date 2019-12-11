@@ -8,7 +8,7 @@
 [ext_resource path="res://MiniMap/Goal.png" type="Texture" id=6]
 
 [node name="Minimap" type="Node2D"]
-position = Vector2( 388, 26 )
+position = Vector2( 360.982, 79.1793 )
 z_index = 80
 script = ExtResource( 1 )
 
