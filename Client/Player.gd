@@ -100,7 +100,7 @@ func make_minimap():
 	if oldmap == null:
 		oldmap = MAP_SCENE.instance()
 		add_child(oldmap)
-	oldmap.start_at(((grid_position.x*2)+1) * 240 + 144 , ((grid_position.y*2)+1) * 135 - 35)
+	oldmap.start_at(((grid_position.x*2)+1) * 240 + 180 , ((grid_position.y*2)+1) * 135 - 65)
 	oldmap.get_node("Sprite_PMiddle").hide()
 	oldmap.get_node("Sprite_CTop").hide()
 	oldmap.get_node("Sprite_CTopLeft").hide()
