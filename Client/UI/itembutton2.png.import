@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/그림1.png-a9551f5708c41bfffc540c70934b404e.stex"
+path="res://.import/itembutton2.png-e6aa086f2d2cff61407bd522a25dd186.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/그림1.png"
-dest_files=[ "res://.import/그림1.png-a9551f5708c41bfffc540c70934b404e.stex" ]
+source_file="res://UI/itembutton2.png"
+dest_files=[ "res://.import/itembutton2.png-e6aa086f2d2cff61407bd522a25dd186.stex" ]
 
 [params]
 
