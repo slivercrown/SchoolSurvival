@@ -44,9 +44,11 @@ func _on_player_disconnected(id):
 	print("number of player:",get_tree().get_network_connected_peers().size())
 	
 	get_tree().get_root().get_node("/root/World").get_node(str(id)).queue_free()
-	rset_unreliable("np", get_tree().get_network_connected_peers().size()-1)
+	#rset_unreliable("np", get_tree().get_network_connected_peers().size()-1)
 	
-	if get_tree().get_network_connected_peers().size() ==1:
+	
+	if get_tree().get_network_connected_peers().size() == 1:
+		rpc_id(get_tree().get_network_connected_peers()[0], "win")
 		print("you win!")
 	else:
 		print("playing")
@@ -55,10 +57,11 @@ func _on_player_disconnected(id):
 
 func _on_player_connected(connected_player_id): #server든, client든 peer가 접속되면 발생.
 	print("plyaer conneted :",get_tree().get_network_connected_peers())
+	print("plyaer conneted type :",get_tree().get_network_connected_peers()[0])
 	print("plyaer conneted, is true? :",get_tree().has_network_peer())
 	print("number of player:",get_tree().get_network_connected_peers().size())
 	
-	rset_unreliable("np", get_tree().get_network_connected_peers().size())
+	#rset_unreliable("np", get_tree().get_network_connected_peers().size())
 	#get_tree().get_root().get_node("/root/World").
 	var local_player_id = get_tree().get_network_unique_id()
 	if not(get_tree().is_network_server()): #if client

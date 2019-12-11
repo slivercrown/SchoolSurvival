@@ -39,11 +39,12 @@ func _connected_to_server():
 	print("_connected_to_server")
 
 func _on_player_disconnected(id):
-	get_tree().get_root().get_node("/root/World").update_score(get_tree().get_network_connected_peers().size()-1)
+	get_tree().get_root().get_node("/root/World").get_node(str(id)).queue_free()
 	players.erase(id)
+	#get_tree().get_root().get_node("/root/World").update_score(get_tree().get_network_connected_peers().size()-1)
 
 func _on_player_connected(connected_player_id): #server든, client든 peer가 접속되면 발생.
-	get_tree().get_root().get_node("/root/World").update_score(get_tree().get_network_connected_peers().size()-1)
+	
 	var local_player_id = get_tree().get_network_unique_id()
 	if not(get_tree().is_network_server()): #client라면
 		rpc_id(1, '_request_player_info', local_player_id, connected_player_id) #서버에서 requestplayerinfo 호출. -> 보낸 정보는 server의 send player info로 인해 캐릭터로 생성된다.
@@ -53,6 +54,7 @@ func _on_player_connected(connected_player_id): #server든, client든 peer가 �
 		print("pass")
 		#rpc('_send_player_info', local_player_id, self_data)
 		pass
+	#get_tree().get_root().get_node("/root/World").update_score(get_tree().get_network_connected_peers().size()-1)
 	#server라면 아무것도 하지 않는다.
 
 remote func _request_player_info(request_from_id, player_id):
@@ -88,6 +90,10 @@ remote func _send_player_info(id, info):
 
 remote func _test():
 	get_node("/root").add_child(world)
+	
+remote func win():
+	get_tree().get_root().get_node("/root/World").queue_free()
+	get_tree().change_scene("res://SceneFolder/WinScene.tscn")
 
 func update_position(id, position):
 	players[id].position = position
