@@ -44,7 +44,7 @@ func _on_player_disconnected(id):
 	print("number of player:",get_tree().get_network_connected_peers().size())
 	
 	get_tree().get_root().get_node("/root/World").get_node(str(id)).queue_free()
-	rset_unreliable("np", get_tree().get_network_connected_peers().size())
+	rset_unreliable("np", get_tree().get_network_connected_peers().size()-1)
 	
 	if get_tree().get_network_connected_peers().size() ==1:
 		print("you win!")

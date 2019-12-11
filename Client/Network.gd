@@ -39,9 +39,11 @@ func _connected_to_server():
 	print("_connected_to_server")
 
 func _on_player_disconnected(id):
+	get_tree().get_root().get_node("/root/World").update_score(get_tree().get_network_connected_peers().size()-1)
 	players.erase(id)
 
 func _on_player_connected(connected_player_id): #server든, client든 peer가 접속되면 발생.
+	get_tree().get_root().get_node("/root/World").update_score(get_tree().get_network_connected_peers().size()-1)
 	var local_player_id = get_tree().get_network_unique_id()
 	if not(get_tree().is_network_server()): #client라면
 		rpc_id(1, '_request_player_info', local_player_id, connected_player_id) #서버에서 requestplayerinfo 호출. -> 보낸 정보는 server의 send player info로 인해 캐릭터로 생성된다.
