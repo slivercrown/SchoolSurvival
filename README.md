@@ -17,4 +17,4 @@
 - This repo is based SW Capstone Design project, 2019 Fall semester, Ajou University, Suwon, S.Korea.
 
 # Previous Repo.
-[Click Here] (https://github.com/slivercrown/Robea)
+[Click Here](https://github.com/slivercrown/Robea)
